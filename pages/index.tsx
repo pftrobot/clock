@@ -56,7 +56,9 @@ const HomePage = () => {
   }
   const handleMouseOut = () => setIsHover(false)
 
-  useEffect(() => (savedCallback.current = callbackFunc))
+  useEffect(() => {
+    savedCallback.current = callbackFunc
+  })
 
   useEffect(() => {
     const now = new Date()
