@@ -97,14 +97,14 @@ const HomePage = () => {
 
         {isMounted && isHover ? (
           createPortal(
-            <OverlayCSS x={position.x} y={position.y}>
+            <ToolTip x={position.x} y={position.y}>
               <p>
                 현재 시간 <br />{' '}
                 {currentHour < 10 ? '0' + currentHour : currentHour}:
                 {currentMinute < 10 ? '0' + currentMinute : currentMinute}:
                 {currentSecond < 10 ? '0' + currentSecond : currentSecond}
               </p>
-            </OverlayCSS>,
+            </ToolTip>,
             document.getElementById('overlay')!
           )
         ) : (
@@ -196,7 +196,7 @@ const dynamicStyle = (props) => css`
   top: ${props.y ? `${props.y}` : 0}px;
 `
 
-const OverlayCSS = styled.div<{ x: number; y: number }>`
+const ToolTip = styled.div<{ x: number; y: number }>`
   pointer-events: none;
   position: fixed;
   display: flex;
