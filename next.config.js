@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: "export",
+  output: 'export',
   trailingSlash: true,
   compiler: {
-    emotion: true
-  }
-};
+    emotion: true,
+  },
+}
 
-export default nextConfig;
+module.exports = nextConfig
